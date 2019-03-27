@@ -18,6 +18,11 @@ $(function() {
   $('#countUp').click(()=>{
     chrome.browserAction.setBadgeText({text: (++count).toString()});
   });
+  $('#options').click(()=>{
+    // chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
+    chrome.runtime.openOptionsPage()
+  });
+  
 
   $('#changeBackground').click(()=>{
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

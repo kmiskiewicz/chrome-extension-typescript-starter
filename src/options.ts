@@ -28,7 +28,7 @@ function restore_options() {
   }, function(items: {favoriteColor, likesColor}) {
     $('#color').val(items.favoriteColor);
     $('#like').prop('checked', items.likesColor);
-  });
+  }); 
 }
 
 $('#save').click(save_options);
